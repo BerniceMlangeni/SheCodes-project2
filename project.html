@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project </title>
+
+    <style>
+        body{
+            background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        h1{
+            border: 2px solid #4E4FEB;
+            border-radius: 10px;
+            font-size: 45px;
+            width: 600px;
+            align-items: center;
+            margin-left: 350px;
+            padding-left: 35px;
+        }
+        h2{
+            text-align: center;
+        }
+
+        p, article, a{
+            font-size: 25px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .container{
+            max-width: 1300px;
+            padding: 30px;
+            border:2px solid #6482AD;
+            border-radius: 12px;
+            align-items: center;
+            display: block;
+            margin: 20px auto;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        button{
+            border-radius: 15px;
+            font-size: 20px;
+            padding: 6px 8px ;
+            border: 1px solid #624E88;
+            background: #F5F5F7;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background: #624E88;
+            color: white;
+        }
+
+        footer{
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .dark{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mustang{
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .image-gallery img{
+            width: 200px;
+            height: 300px;
+            border-radius: 15px;
+            display: inline-block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+      transform: scale(1.2); 
+      filter: brightness(80%);
+    }
+
+        .image-gallery{
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px 250px 250px 250px 250px 250px;
+           grid-gap: 20px; 
+           overflow: hidden;
+           overflow-x: scroll; 
+           white-space: nowrap; 
+        }
+        .scroll-container::-webkit-scrollbar {
+         width: 0;
+        background: transparent;
+        display: none;
+        }
+        
+        .light-btn{
+            background:  #F5F5F7;
+            color: white;
+        }
+
+        .dark-theme{
+            background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+            color: white;
+        }
+    </style>
+</head>
+<body class="themes">
+    <button class="dark">Change Theme</button>
+
+    <div class="container">
+    <h1>  Ford Mustang🔥🔥🔥</h1>
+    <h2>It's giving big beast stallion energy!!</h2>
+
+    <p>Nothing but the coolest and most beautiful cars on earth! <br> But let's hear what professionals say about it😉 <br>
+        <article>It’s the Ford Mustang, brah. It’s Ford’s high-revving, tire-smoking, rental-car-counter-ruling,  <br> 
+                 Cars-&-Coffee-terrorizing icon. But it’s also a surprisingly well-honed performance machine, and  <br>
+                 with each new iteration, the Mustang’s become less of a straight-line warrior and more of a proper sports car.
+                 <br> Now in its seventh generation, the Mustang is better than ever.</article>
+                 <a href="https://www.topgear.com/car-reviews/ford/mustang-us">Read more from Top Gear</a>
+    </p>
+
+    <div class="image-gallery">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/721/original/3e4fcb89-0e5f-41c6-90ba-576fec708df7.jpg?1727682987">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/722/original/Mustang.jpg?1727683092">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/723/original/Ford_Mustang.jpg?1727683149">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/724/original/_Mustang.jpg?1727683209">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/754/original/WALLPAPER_MUSTANG__LIGHTROOM_%281%29.jpg?1727702344">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/726/original/d404b30f-fd65-4b6d-b927-b6ef578fc012.jpg?1727683407">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/727/original/Mustang_%281%29.jpg?1727683575">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/728/original/The_NEW_2024_Mustang_DarkHorse!_%281%29.jpg?1727683659">
+
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/729/original/2023-24_FORD_CAMARO_Dark_Horse.jpg?1727683718">
+
+
+    </div>
+
+    <button class="mustang">I ❤️ Mustang🔥</button>
+
+    <footer>Coded by Bernice Mlangeni
+    </footer>
+
+   <script>
+    
+    function changeTheme(){
+            let mode = document.querySelector(".themes");
+            let button = document.querySelector(".dark");
+            
+            if( mode.classList.contains("dark-theme") && mode.classList.contains("light-btn")){
+                mode.classList.remove("dark-theme");
+                mode.classList.remove("light-btn");
+
+                button.innerHTML = "Switch to dark mode";
+            }
+            else{
+                mode.classList.add("dark-theme");
+                mode.classList.add("light-btn");
+
+                button.innerHTML = "Switch to light mode";
+            }
+          
+        }
+        let button = document.querySelector("button");
+        button.addEventListener("click", changeTheme);
+
+        function signUp() {
+            let username = prompt("What is your name?");
+            let fan = prompt("Are you a Mustang fan? (Yes/No)").toLowerCase();
+
+            if( fan === "yes") {
+                alert("Hello👋" + username + " I see you are a Mustang fan and Mustang fans deserve nothing but nice things!🙌😝❤️");
+            }
+            else{
+                alert("Hello👋," + username + "You can still browse the content of the page, maybe by the time you are done ypu will love this brand too!😏😉");
+            }
+        }
+
+        
+    
+        let theButton = document.querySelector(".mustang");
+        theButton.addEventListener("click", signUp);
+   </script>
+</div>
+</body>
+</html>
